@@ -1,0 +1,45 @@
+# LiteLLM Proxy — ChatGPT
+# Requires a ChatGPT Plus/Pro subscription.
+# On first request, LiteLLM triggers an OAuth device flow in the terminal.
+#
+# Start: uv run litellm --config litellm_config_chatgpt.yaml
+
+model_list:
+  - model_name: claude-opus-4-6
+    litellm_params:
+      model: chatgpt/gpt-5.4
+
+  - model_name: opus
+    litellm_params:
+      model: chatgpt/gpt-5.4
+
+  - model_name: claude-opus-4-20250514
+    litellm_params:
+      model: chatgpt/gpt-5.4
+
+  - model_name: claude-sonnet-4-6
+    litellm_params:
+      model: chatgpt/gpt-5.4
+
+  - model_name: sonnet
+    litellm_params:
+      model: chatgpt/gpt-5.4
+
+  - model_name: claude-sonnet-4-20250514
+    litellm_params:
+      model: chatgpt/gpt-5.4
+
+  - model_name: claude-haiku-4-5-20251001
+    litellm_params:
+      model: chatgpt/gpt-5.4
+
+  - model_name: haiku
+    litellm_params:
+      model: chatgpt/gpt-5.4
+
+litellm_settings:
+  drop_params: true
+  use_chat_completions_url_for_anthropic_messages: true
+
+general_settings:
+  port: 4000

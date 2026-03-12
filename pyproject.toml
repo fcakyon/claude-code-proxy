@@ -1,0 +1,8 @@
+[project]
+name = "llm-workshop"
+version = "0.1.0"
+description = "LiteLLM proxy setup for routing Claude Code through GitHub Copilot or ChatGPT subscriptions"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "litellm[proxy]",
+]

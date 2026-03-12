@@ -1,0 +1,58 @@
+# LiteLLM Proxy — GitHub Copilot (Claude models)
+# Requires a paid GitHub Copilot subscription.
+# On first request, LiteLLM triggers an OAuth device flow in the terminal.
+#
+# Start: uv run litellm --config litellm_config_copilot.yaml
+
+model_list:
+  # Opus 4.6
+  - model_name: claude-opus-4-6
+    litellm_params:
+      model: github_copilot/claude-opus-4.6
+      extra_headers: &copilot_headers
+        Editor-Version: "vscode/1.85.1"
+        Copilot-Integration-Id: "vscode-chat"
+
+  - model_name: opus
+    litellm_params:
+      model: github_copilot/claude-opus-4.6
+      extra_headers: *copilot_headers
+
+  - model_name: claude-opus-4-20250514
+    litellm_params:
+      model: github_copilot/claude-opus-4.6
+      extra_headers: *copilot_headers
+
+  # Sonnet 4.6
+  - model_name: claude-sonnet-4-6
+    litellm_params:
+      model: github_copilot/claude-sonnet-4.6
+      extra_headers: *copilot_headers
+
+  - model_name: sonnet
+    litellm_params:
+      model: github_copilot/claude-sonnet-4.6
+      extra_headers: *copilot_headers
+
+  - model_name: claude-sonnet-4-20250514
+    litellm_params:
+      model: github_copilot/claude-sonnet-4.6
+      extra_headers: *copilot_headers
+
+  # Haiku 4.5
+  - model_name: claude-haiku-4-5-20251001
+    litellm_params:
+      model: github_copilot/claude-haiku-4.5
+      extra_headers: *copilot_headers
+
+  - model_name: haiku
+    litellm_params:
+      model: github_copilot/claude-haiku-4.5
+      extra_headers: *copilot_headers
+
+litellm_settings:
+  drop_params: true
+  use_chat_completions_url_for_anthropic_messages: true
+
+general_settings:
+  port: 4000
