@@ -1,4 +1,4 @@
-# llm-workshop
+# claude-code-proxy
 
 Route Claude Code through a GitHub Copilot or ChatGPT subscription via LiteLLM proxy.
 
@@ -12,7 +12,7 @@ With the Copilot config, Claude Code uses **real Claude models** (Opus 4.6, Sonn
 ## Setup
 
 ```bash
-cd ~/dev/llm-workshop
+cd ~/dev/claude-code-proxy
 uv sync
 ```
 
@@ -47,7 +47,7 @@ The proxy starts on `http://localhost:4000`.
 Launch Claude Code (Terminal 2):
 
 ```bash
-cd ~/dev/llm-workshop
+cd ~/dev/claude-code-proxy
 claude
 ```
 
